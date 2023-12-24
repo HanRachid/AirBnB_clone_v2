@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Starts Falsk server, listening on route /
+"""
 from flask import Flask
 app = Flask(__name__)
 
