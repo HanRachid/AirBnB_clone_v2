@@ -18,6 +18,19 @@ def hbnb():
     return "HBNB"
 
 
+@app.route('/c/<text>', strict_slashes=False)
+def text(text):
+    newtext = text.replace("_", " ")
+    return f'C {newtext}'
+
+
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def python(text="is cool"):
+    newtext = text.replace("_", " ")
+    return f'Python {newtext}'
+
+
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0")
