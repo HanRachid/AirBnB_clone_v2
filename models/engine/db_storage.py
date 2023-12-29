@@ -58,7 +58,7 @@ class DBStorage:
 
     def new(self, obj):
         """Adds a new object to the current session."""
-        if obj :
+        if obj:
             self.__session.add(obj)
 
     def save(self):
@@ -69,3 +69,6 @@ class DBStorage:
         """Removes an object from the current session."""
         if obj:
             self.__session.delete(obj)
+
+    def close(self):
+        self.__session.remove()
